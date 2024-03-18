@@ -23,7 +23,7 @@ class NotifySendPy:
 
     def action(self, n, text, maybe_params):
         if maybe_params != None:
-            print(text + " " + str (maybe_params))
+            print(text + " " + str(maybe_params))
         else:
             print(text)
         if not self.dontQuitOnAction:
@@ -136,7 +136,7 @@ class NotifySendPy:
                     try:
                         pidf.write(listener.address)
                     except TypeError:
-                        pidf.write(listener.address.encode('utf8'))
+                        pidf.write(listener.address.encode('utf8'))  # Encode address as bytes
                 replaces_processes = {}
                 n.show()
                 replaces_processes[replaces_process] = n.id
